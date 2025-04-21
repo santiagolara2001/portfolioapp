@@ -28,10 +28,12 @@ if page == "Homepage / About Me":
     I focus on practical solutions that make a real impact.""")
     
     
-    st.markdown("""Career Focus: Business Analytics | Dashboard Development | Looking to expand on Machine Learning    
+    st.markdown("""
+    Career Focus: Business Analytics | Dashboard Development | Looking to expand on Machine Learning  
     🔗 [Download my CV](path_to_cv.pdf)  
-    🔗 [Visit my Linkedin profile](www.linkedin.com/in/santiagolara35234)
+    🔗 [Visit my LinkedIn profile](https://www.linkedin.com/in/santiagolara35234)
     """)
+
 
 # ---- POWER BI PROJECTS ----
 elif page == "Power BI Projects":
