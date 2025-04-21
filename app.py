@@ -5,21 +5,6 @@ import streamlit as st
 # ---- PAGE CONFIG ----
 st.set_page_config(page_title="Santiago Lara | Data Analyst Portfolio", layout="wide")
 
-def set_background_color(color):
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-color: {color};
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-background_color = "black"  # You can change this to any valid CSS color
-set_background_color(background_color)
-
 # ---- SIDEBAR ----
 st.sidebar.title("📁 Portfolio Sections")
 page = st.sidebar.radio("Navigate to:", [
