@@ -5,6 +5,21 @@ import streamlit as st
 # ---- PAGE CONFIG ----
 st.set_page_config(page_title="Santiago Lara | Data Analyst Portfolio", layout="wide")
 
+def set_background_color(color):
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-color: {color};
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+background_color = "black"  # You can change this to any valid CSS color
+set_background_color(background_color)
+
 # ---- SIDEBAR ----
 st.sidebar.title("📁 Portfolio Sections")
 page = st.sidebar.radio("Navigate to:", [
@@ -12,15 +27,20 @@ page = st.sidebar.radio("Navigate to:", [
     "Power BI Projects",
     "Python Projects",
     "ML & Forecasting Models",
-    "Downloadables"
+    "Courses and Certifications",
+    "Research Projects"
 ])
 
 # ---- HOMEPAGE / ABOUT ME ----
 if page == "Homepage / About Me":
     st.title("👋 Hello, I'm Santiago Lara")
+    
+    st.subheader("Industrial and Systems Engineering (IISE) | Data Analytics & BI | UI/UX Design")
+    
+    st.divider()
 
     st.markdown("""
-    Welcome to my data analytics portfolio. I'm a data analyst passionate about turning 
+    Welcome to my data analytics portfolio! I'm a data analyst passionate about turning 
     data into actionable insights.  \n  \nData is more than numbers—it's a story waiting to be told. 
     I enjoy turning raw information into clear, visual insights that help people 
     and businesses make smarter decisions. Whether it's building dashboards, 
@@ -29,7 +49,7 @@ if page == "Homepage / About Me":
     
     
     st.markdown("""
-    Career Focus: Business Analytics | Dashboard Development | Looking to expand on Machine Learning  
+    **Career Focus: Business Analytics | Dashboard Development | Looking to expand on Machine Learning**  
     🔗 [Download my CV](path_to_cv.pdf)  
     🔗 [Visit my LinkedIn profile](https://www.linkedin.com/in/santiagolara35234)
     """)
@@ -69,19 +89,24 @@ elif page == "ML & Forecasting Models":
     - 📄 [Download Model Report](files/forecasting_report.pdf)
     """)
 
-# ---- DOWNLOADABLES ----
-elif page == "Downloadables":
-    st.title("📥 Resources & Downloads")
+# ---- Courses and Certifications ----
+elif page == "Courses and Certifications":
+    st.title("🏅 Courses and Certifications")
 
-    st.markdown("Here you can download my resume, project summaries, and access repositories.")
-    with open("files/Santiago_Lara_CV.pdf", "rb") as file:
-        st.download_button("📄 Download My CV", file, file_name="Santiago_Lara_CV.pdf")
-
+    st.markdown("Below are some of the independent courses and certifications I've completed to enhance my analytics skills.")
+    st.subheader("📉 Sales Forecasting with Prophet")
     st.markdown("""
-    🔗 [GitHub Repositories](https://github.com/yourusername)  
-    📄 [Power BI Case Studies](files/pbi_cases.zip)  
-    📄 [Python Projects Summaries](files/python_projects.zip)
+    - **Problem**: Forecast monthly revenue for vending machine business
+    - **Tech**: Python, Facebook Prophet, Pandas
+    - 📄 [Download Model Report](files/forecasting_report.pdf)
     """)
+
+# ---- DOWNLOADABLES ----
+elif page == "Research Projects":
+    st.title("📥 Research Projects")
+
+    st.markdown("Here you'll find details on my research projects, highlighting the methodologies I employed "
+    "and the key learnings gained through independent investigation.")
 
 # ---- FOOTER ----
 st.markdown("""
