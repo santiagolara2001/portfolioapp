@@ -20,12 +20,17 @@ if page == "Homepage / About Me":
     st.title("👋 Hello, I'm Santiago Lara")
 
     st.markdown("""
-    Welcome to my data analytics portfolio. I'm a data analyst passionate about turning data into actionable insights.
+    Welcome to my data analytics portfolio. I'm a data analyst passionate about turning 
+    data into actionable insights.  \n  \nData is more than numbers—it's a story waiting to be told. 
+    I enjoy turning raw information into clear, visual insights that help people 
+    and businesses make smarter decisions. Whether it's building dashboards, 
+    exploring data with Python, or designing user-friendly reports in Power BI, 
+    I focus on practical solutions that make a real impact.""")
     
-    **Career Focus**: Business Analytics | Dashboard Development | Predictive Modeling
     
+    st.markdown("""Career Focus: Business Analytics | Dashboard Development | Looking to expand on Machine Learning    
     🔗 [Download my CV](path_to_cv.pdf)  
-    🔗 [Visit my GitHub](https://github.com/yourusername)
+    🔗 [Visit my Linkedin profile](www.linkedin.com/in/santiagolara35234)
     """)
 
 # ---- POWER BI PROJECTS ----
@@ -79,5 +84,5 @@ elif page == "Downloadables":
 # ---- FOOTER ----
 st.markdown("""
 ---
-© 2025 Santiago Lara | Built with ❤️ using Streamlit
+© 2025 Santiago Lara | Built using Streamlit
 """)
